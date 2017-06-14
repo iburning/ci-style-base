@@ -1,0 +1,7 @@
+/**
+ * ci-style-base - CafeInit CSS base
+ * @version v1.0.0
+ * @license Apache-2.0
+ * @copyright 2017 CafeInit.
+ */
+.ci-media{display:-webkit-flex;display:-ms-flexbox;display:flex;padding:.32rem}.ci-media__image{min-width:.8rem}.ci-media__content{-webkit-flex:1;-ms-flex:1;flex:1}.ci-media__extend{min-width:.48rem}
