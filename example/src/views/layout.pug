@@ -1,0 +1,24 @@
+doctype html
+html(style="font-size: 50px;")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    title ci-ui-base
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+      
+    link(rel="stylesheet" href="/style/ci-style-base.css")
+    link(rel="stylesheet" href="/style/main.css")
+
+  body
+    div.app-header
+      div.app-header__inner
+        strong.app-logo CafeInit
+
+    div.app-body#app
+      block content
+
+    div.app-footer
+      div.app-footer__inner
+        p.copyright
+          | Powered by 
+          a(href="http://www.cafeinit.com") CafeInit
