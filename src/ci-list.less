@@ -14,14 +14,14 @@
 
 .ci-list__header {
   padding: 0 16px;
+
+  .ci-media__title {
+    font-size: @FONT_SIZE_NORMAL;
+  }
 }
 
 .ci-list__header-title {
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-  font-size: @FONT_SIZE_SMALL;
-  color: @COLOR_GRAY;
+  .ci-title(@FONT_SIZE_NORMAL, @COLOR_GRAY_DARKER);
 }
 
 .ci-list__body {

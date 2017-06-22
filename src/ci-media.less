@@ -6,7 +6,7 @@
 
 .ci-media {
   display: flex;
-  max-width: 480 * @REM;
+  // max-width: 480 * @REM;
   // min-height: 48 * @REM;
   padding: 16 * @REM;
   align-items: center;
@@ -26,10 +26,7 @@
 }
 
 .ci-media__title {
-  margin: 0 0 4 * @REM 0;
-  font-size: @FONT_SIZE_BIG;
-  font-weight: normal;
-  color: @COLOR_GRAY_DARKER;
+  .ci-title(@FONT_SIZE_BIG, @COLOR_GRAY_DARKER);
 }
 
 .ci-media__text {
