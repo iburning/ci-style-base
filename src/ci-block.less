@@ -1,0 +1,45 @@
+/**
+ * @fileoverview ci-block
+ * @author burning (www.cafeinit.com)
+ * @version 2017.06.22
+ */
+
+.ci-block {
+  background-color: @COLOR_WHITE;
+  margin-bottom: 32 * @REM;
+  border-top: 1px solid @BORDER_COLOR;
+  border-bottom: 1px solid @BORDER_COLOR;
+}
+
+.ci-block_radius {
+  margin-left: 16 * @REM;
+  margin-right: 16 * @REM;
+  border: 1px solid @BORDER_COLOR;
+  border-radius: 3 * @REM;
+
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.ci-block__header {
+  padding: 16px;
+
+  .ci-media__title {
+    font-size: @FONT_SIZE_NORMAL;
+  }
+}
+
+.ci-block__header-title {
+  .ci-title(@FONT_SIZE_NORMAL, @COLOR_GRAY_DARKER);
+}
+
+.ci-block__body {
+  min-height: 48 * @REM;
+}
+
+.ci-block__footer {
+  padding: 16px;
+
+  border-top: 1px solid @BORDER_COLOR;
+}
