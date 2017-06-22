@@ -48,7 +48,11 @@ gulp.task('example:views', () => {
   return gulp.src([
     './example/src/views/*.pug'
   ])
-    .pipe(pug())
+    .pipe(pug({
+      data: {
+        time: Date.now()
+      }
+    }))
     .pipe(gulp.dest('./example/dist'))
 })
 

@@ -1,10 +1,24 @@
 /**
  * @fileoverview main
  * @author burning (www.cafeinit.com)
- * @version 2017.06.14
+ * @version 2017.06.22
  */
 
 @import "./variables";
 @import "./mixins";
 
 @import "./ci-media";
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: @FONT_SIZE_NORMAL;
+  color: @FONT_COLOR;
+}
+
+.ci-text-right {
+  text-align: right;
+}
+
+.ci-text-small {
+  font-size: @FONT_SIZE_SMALL;
+}

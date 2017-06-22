@@ -10,12 +10,35 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   padding: 0;
   margin: 0;
   font-size: 16 * @REM;
 }
 
 .app-header {
-  border: 1px solid #ddd;
+  display: none;
+  padding: 8 * @REM;
+  margin-bottom: 16 * @REM;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-title {
+  padding: 16 * @REM;
+  margin: 0;
+  font-size: 16 * @REM;
+  font-weight: normal;
+}
+
+.app-body {
+  min-height: 100%;
+  padding-bottom: 80 * @REM;
+}
+
+.app-footer {
+  margin-top: -80 * @REM;
+  padding: 16 * @REM;
+  font-size: 16 * @REM * 0.75;
+  text-align: center;
 }
