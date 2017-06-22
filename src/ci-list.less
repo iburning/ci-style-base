@@ -1,0 +1,51 @@
+/**
+ * @fileoverview ci-list
+ * @author burning (www.cafeinit.com)
+ * @version 2017.06.22
+ */
+
+.ci-list {
+  margin-bottom: 32 * @REM;
+
+  .ci-media {
+    padding: 0;
+  }
+}
+
+.ci-list__header {
+  padding: 0 16px;
+}
+
+.ci-list__header-title {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: @FONT_SIZE_SMALL;
+  color: @COLOR_GRAY;
+}
+
+.ci-list__body {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ci-list__cell {
+  background-color: @COLOR_WHITE;
+  position: relative;
+  list-style: none;
+  min-height: 48 * @REM;
+  padding: 16 * @REM;
+  margin: 0;
+
+  &::after {
+    background-color: @BORDER_COLOR;
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 16 * @REM;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+  }
+}
