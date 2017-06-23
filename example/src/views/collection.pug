@@ -29,11 +29,28 @@ block content
     ul.ci-collection__body
       - for (var i = 0; i < 6; i++)
         li.ci-collection__cell
+          div.ci-block.ci-block_shadow
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+
+
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
           div.ci-block.ci-block_radius
             div.ci-block__body
               include components/media-product__image-top
-            div.ci-block__footer.ci-text-right
-              a Add to Cart
-              
-  
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+
   style .product { background: #fff; }
