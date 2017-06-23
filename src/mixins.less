@@ -1,13 +1,27 @@
 /**
  * @fileoverview mixins
  * @author burning (www.cafeinit.com)
- * @version 2017.06.14
+ * @version 2017.06.21
  */
 
 .ci-title(@font_size, @color) {
+  @line_height: 1.25;
+  @lines_to_show: 2;
+  @height: @font_size * @line_height * @lines_to_show;
+
   padding: 0;
-  margin: 0 0 4 * @REM 0;
+  // margin: 0 0 4 * @REM 0;
+  margin: 0 auto;
   font-size: @font_size;
   font-weight: normal;
   color: @color;
+
+  overflow: hidden;
+  display: block;   // Fallback for non-webkit
+  display: -webkit-box;
+  max-height: @height;   // Fallback for non-webkit */
+  line-height: @line_height;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @lines_to_show;
+  -webkit-box-orient: vertical;
 }

@@ -13,7 +13,7 @@
 }
 
 .ci-list__header {
-  padding: 0 16px;
+  padding: 16 * @REM;
 
   .ci-media__title {
     font-size: @FONT_SIZE_NORMAL;
@@ -47,5 +47,11 @@
     right: 0;
     bottom: 0;
     height: 1px;
+  }
+}
+
+.ci-list__cell:last-child {
+  &::after {
+    display: none;
   }
 }

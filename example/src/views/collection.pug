@@ -10,7 +10,7 @@ block content
     ul.ci-collection__body
       - for (var i = 0; i < 6; i++)
         li.ci-collection__cell
-          div.ci-media_image-top
+          div.ci-media_image-top.product
             div.ci-media__image
               img(src="http://via.placeholder.com/128x96" width="100%")
             div.ci-media__content
@@ -29,9 +29,11 @@ block content
     ul.ci-collection__body
       - for (var i = 0; i < 6; i++)
         li.ci-collection__cell
-          div.ci-media_image-top
-            div.ci-media__image
-              img(src="http://via.placeholder.com/128x96" width="100%")
-            div.ci-media__content
-              h4.ci-media__title UBTECH Jimu Robot Meebot Kit
-              p.ci-media__text $129.95
+          div.ci-block.ci-block_radius
+            div.ci-block__body
+              include components/media-product__image-top
+            div.ci-block__footer.ci-text-right
+              a Add to Cart
+              
+  
+  style .product { background: #fff; }

@@ -23,7 +23,8 @@
 }
 
 .ci-block__header {
-  padding: 16px;
+  padding: 16 * @REM;
+  border-bottom: 1px solid @BORDER_COLOR;
 
   .ci-media__title {
     font-size: @FONT_SIZE_NORMAL;
@@ -42,4 +43,12 @@
   padding: 16px;
 
   border-top: 1px solid @BORDER_COLOR;
+}
+
+
+.ci-block {
+  .ci-list {
+    // margin-bottom: 16 * @REM;
+    margin-bottom: 0;
+  }
 }

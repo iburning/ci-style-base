@@ -30,13 +30,13 @@
 }
 
 .ci-media__text {
-  margin: 0 0 4 * @REM 0;
+  margin: 4 * @REM 0;
 }
 
 .ci-media__extend {
   min-width: 24 * @REM;   // 56 - 16 * 2
   max-width: 25%;
-  margin-left: 16px;
+  margin-left: 16 * @REM;
 
   .ci-media__text {
     display: block;
@@ -60,17 +60,22 @@
 
 .ci-media_image-top {
   display: block;
+  padding: 0;
 
   .ci-media__image {
-    margin-bottom: 8 * @REM;
+    // margin-bottom: 8 * @REM;
     margin-right: 0;
   }
 
   .ci-media__content {
-    margin-bottom: 8 * @REM;
+    // margin-bottom: 8 * @REM;
+    padding: 16 * @REM;
   }
 
   .ci-media__extend {
+    max-width: none;
+    padding: 16 * @REM;
+    padding-top: 0;
     margin: 0;
   }
 }
