@@ -10,12 +10,7 @@ block content
     ul.ci-collection__body
       - for (var i = 0; i < 6; i++)
         li.ci-collection__cell
-          div.ci-media_image-top.product
-            div.ci-media__image
-              img(src="http://via.placeholder.com/128x96" width="100%")
-            div.ci-media__content
-              h4.ci-media__title UBTECH Jimu Robot Meebot Kit
-              p.ci-media__text $129.95
+          include components/media-product__image-top
 
 
   div.ci-collection
@@ -29,12 +24,28 @@ block content
     ul.ci-collection__body
       - for (var i = 0; i < 6; i++)
         li.ci-collection__cell
-          div.ci-block.ci-block_shadow
+          div.ci-block.ci-block_border
             div.ci-block__body
               include components/media-product__image-top
             //- div.ci-block__footer.ci-text-right
             //-   a Add to Cart
-
+            
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+    
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          div.ci-block.ci-block_border.ci-block_shadow
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
 
   div.ci-collection
     div.ci-collection__header
@@ -47,7 +58,24 @@ block content
     ul.ci-collection__body
       - for (var i = 0; i < 6; i++)
         li.ci-collection__cell
-          div.ci-block.ci-block_radius
+          div.ci-block.ci-block_border-radius
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+                      
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          div.ci-block.ci-block_border-radius.ci-block_shadow
             div.ci-block__body
               include components/media-product__image-top
             //- div.ci-block__footer.ci-text-right
