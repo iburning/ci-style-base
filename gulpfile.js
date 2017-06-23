@@ -1,7 +1,7 @@
 /**
  * @fileoverview gulpfile
  * @author burning (www.cafeinit.com)
- * @version 2017.06.14
+ * @version 2017.06.22
  */
 
 'use strict'
@@ -11,7 +11,6 @@ const cleanCSS = require('gulp-clean-css')
 const header = require('gulp-header')
 const less = require('gulp-less')
 const LessAutoprefix = require('less-plugin-autoprefix')
-const pug = require('gulp-pug')
 const rename = require('gulp-rename')
 const pkg = require('./package.json')
 
@@ -27,9 +26,9 @@ const banner = [
 ].join('\n')
 
 // tasks
-gulp.task('default', ['style', 'example'])
+gulp.task('default', ['build'])
 
-gulp.task('style', () => {
+gulp.task('build', () => {
   return gulp.src([
     './src/main.less'
   ])
@@ -38,39 +37,6 @@ gulp.task('style', () => {
     }))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(header(banner, { pkg: pkg }))
-    .pipe(rename('ci-style-base.css'))
+    .pipe(rename('ci-ui-base.css'))
     .pipe(gulp.dest('./dist'))
-})
-
-gulp.task('example', ['example:views', 'example:style', 'example:copy'])
-
-gulp.task('example:views', () => {
-  return gulp.src([
-    './example/src/views/*.pug'
-  ])
-    .pipe(pug({
-      data: {
-        time: Date.now()
-      }
-    }))
-    .pipe(gulp.dest('./example/dist'))
-})
-
-gulp.task('example:style', () => {
-  return gulp.src([
-    './example/src/style/main.less'
-  ])
-    .pipe(less({
-      plugins: [ autoprefix ]
-    }))
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(header(banner, { pkg: pkg }))
-    .pipe(gulp.dest('./example/dist/style'))
-})
-
-gulp.task('example:copy', () => {
-  return gulp.src([
-    './dist/*'
-  ])
-    .pipe(gulp.dest('./example/dist/style'))
 })

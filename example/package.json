@@ -1,10 +1,11 @@
 {
-  "name": "ci-ui-base",
+  "name": "example",
   "version": "1.0.0",
-  "description": "CafeInit UI base",
+  "description": "CafeInit UI base example",
   "main": "index.js",
   "scripts": {
     "build": "gulp",
+    "start": "http-server ./dist -p 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +25,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.2",
-    "gulp-header": "^1.8.8",
     "gulp-less": "^3.3.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-pug": "^3.3.0",
+    "http-server": "^0.10.0",
     "less-plugin-autoprefix": "^1.5.1"
   }
 }

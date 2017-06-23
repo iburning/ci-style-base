@@ -1,2 +1,2 @@
-# ci-style-base
-CafeInit CSS base
+# ci-ui-base
+CafeInit UI base
